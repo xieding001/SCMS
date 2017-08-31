@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>内容管理系统后台</title>
+  <link rel="stylesheet" th:href="@{/easy-ui/themes/default/easyui.css}" />
+  <link rel="stylesheet" th:href="@{/easy-ui/themes/icon.css}" />
+  <script th:src="@{/easy-ui/jquery.min.js}"></script>
+  <script th:src="@{/easy-ui/jquery.easyui.min.js}"></script>
+  <script th:src="@{/js/content.manage.js}"></script>
+
+</head>
+<body class="easyui-layout">
+    <!--上方-->
+  <div data-options="region:'north'" style="width:100%;height:30px">
+
+  </div>
+    <!--底部-->
+
+    <!--中间主体-->
+  <div data-options="region:'center'">
+    <div class="easyui-layout" data-options="fit:true">
+      <div data-options="region:'north'" style="height:65px">
+        <div style="width:100%;padding-top:15px">
+          <div style="width:200px;float:left"> &nbsp;</div>
+          <div class="easyui-panel " style="padding:5px;">
+            <a id="cm" onclick="initContentManagePanel()" style="margin:0 5px 0 5px;" href="javascript:void(0)" class="easyui-linkbutton" data-options="toggle:true,group:'g1',selected:true">内容管理</a>
+            <a id="fm" style="margin:0 5px 0 5px;" href="javascript:void(0)" class="easyui-linkbutton" data-options="toggle:true,group:'g1'">发布管理</a>
+            <a id="sm" style="margin:0 5px 0 5px;" href="javascript:void(0)" class="easyui-linkbutton" data-options="toggle:true,group:'g1'">系统管理</a>
+          </div>
+        </div>
+      </div>
+
+      <div data-options="region:'south',split:false" style="height:50px;">
+
+      </div>
+
+      <div data-options="region:'center'">
+        <!--嵌套一个layout 包含一个panel-->
+        <div id="center-panel" class="easyui-panel" style="width:100%;height:100%;overflow:hidden">
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    initContentManagePanel();
+  })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<div class="easyui-layout" data-options="fit:true">
+    <!--<%&#45;&#45;左侧导航栏&#45;&#45;%>-->
+    <div data-options="region:'west',split:true" style="width:230px;overflow:hidden">
+        <div class="easyui-accordion" style="width:100%;height:100%;" >
+            <div title="内容管理" data-options="fit:true,iconCls:'icon-edit'" style="padding:10px;">
+                <ul id="navtree" class="easyui-tree" ></ul>
+            </div>
+        </div>
+    </div>
+    <!--<%&#45;&#45;主体&#45;&#45;%>-->
+    <div data-options="region:'center'">
+        <div id="layout_center_tabs" class="easyui-tabs" data-options="fit:true" >
+            <div title="文档管理" data-options="href:'panel/content/docMgr.jsp'">
+
+            </div>
+            <div title="栏目管理" data-options="href:'/channelMgr'">
+
+            </div>
+            <div title="发布管理" data-options="href:'panel/content/publishMgr.jsp'">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        initNavTree();
+    })
+
+</script>
